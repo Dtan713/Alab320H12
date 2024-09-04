@@ -1,74 +1,91 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Apply border to the left side of the page */
+html {
+    border-left: 5px solid lightgray;
 }
 
+/* Set body to use sans-serif fonts, center it with max-width and min-height */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: sans-serif;
+    min-height: 100vh; /* 100% of viewport height */
+    max-width: 1000px;
+    margin: 0 auto; /* Center body horizontally */
+    padding: 0; /* Remove default padding */
 }
 
-header {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+/* Add padding to header, main, and footer */
+header, main, footer {
+    padding: 1rem 2rem; /* Top and bottom: 1rem, left and right: 2rem */
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
+/* Style <h1> with tomato color */
+h1 {
+    color: tomato;
 }
 
-header h2 {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
+/* Ensure images use 100% width */
+img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Style navigation lists */
 nav ul {
-    list-style: none;
     padding: 0;
+    list-style-type: none;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
+/* Flexbox styling for navigation */
+nav ul {
+    display: flex;
+    justify-content: space-between; /* Space out menu items */
 }
 
+/* Style anchors in the navigation */
 nav ul li a {
     text-decoration: none;
-    color: #007bff;
+    font-weight: normal;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* Light gray color for main navigation links */
+header nav ul li a {
+    color: lightgray;
 }
 
-main {
-    padding: 1rem;
+/* Tomato color for footer navigation links */
+footer nav ul li a {
+    color: tomato;
 }
 
+/* Style titles of blog posts */
+article h2 {
+    font-size: 2rem; /* Larger title */
+}
+
+/* Style 'continues...' anchor tags */
+.continues {
+    text-align: right;
+    font-weight: bold;
+    color: tomato;
+    display: block; /* Ensure it spans full width */
+}
+
+/* Style articles with bottom margin, border, and padding */
 article {
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem; /* Margin below each article */
+    border-bottom: 1px solid lightgray; /* Light gray border at the bottom */
+    padding-bottom: 2rem; /* Padding at the bottom */
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
-    border-top: 1px solid #ddd;
+/* Style first letter of paragraphs inside articles */
+article p::first-letter {
+    color: lightgray;
+    font-size: 2rem; /* Larger drop cap */
+    float: left;
+    margin-right: 0.5rem; /* Space between drop cap and text */
 }
 
-footer nav ul {
-    margin-bottom: 1rem;
-}
-
-footer nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
+/* Style copyright text */
 footer p {
-    margin-top: 0;
+    color: lightgray;
 }
